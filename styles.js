@@ -1,0 +1,198 @@
+import { StyleSheet } from 'react-native';
+
+export const colors = {
+	primary: '#f8f8f8',
+	secondary: '#fff',
+	accent: '#e2e2e2',
+};
+
+export const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		flexDirection: 'column',
+		backgroundColor: colors.primary,
+		alignItems: 'center',
+		justifyContent: 'space-between',
+	},
+	infoSection: {
+		flex: 0.1,
+		width: '80%',
+		backgroundColor: colors.secondary,
+		alignItems: 'center',
+		justifyContent: 'center',
+		padding: 10,
+		borderBottomWidth: 1,
+		borderBottomColor: colors.accent,
+		borderRadius: 10,
+		marginTop: 10,
+		boxShadow: '0px 2px 4px rgba(0,0,0,0.1)',
+	},
+	headerText: {
+		fontSize: 24,
+		fontWeight: 'bold',
+		textAlign: 'center',
+	},
+	sectionTitle: {
+		fontSize: 20,
+		fontWeight: '600',
+		marginVertical: 10,
+	},
+	appBar: {
+		width: '100%',
+		height: 60,
+		backgroundColor: colors.secondary,
+		borderTopColor: colors.accent,
+		borderTopWidth: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	appBarIconSection: {
+		flexDirection: 'row',
+		justifyContent: 'space-evenly',
+		width: '100%',
+	},
+	mealsContainer: {
+		flex: 1,
+		width: '80%',
+		backgroundColor: colors.secondary,
+		borderRadius: 10,
+		marginTop: 10,
+	},
+	mealsContent: {
+		padding: 10,
+		flexGrow: 1,
+	},
+	mealsContainerEmpty: {
+		flex: 0,
+		maxHeight: 150,
+	},
+	customButton: {
+		width: '100%',
+		textAlign: 'center',
+		borderWidth: 1,
+		borderRadius: 8,
+		fontWeight: 'bold',
+		paddingVertical: 12,
+	},
+	primary: {
+		backgroundColor: '#01080d',
+		color: '#ffffff',
+	},
+	secondary: {
+		borderColor: '#ccc',
+	},
+	mealSection: {
+		flexDirection: 'column',
+		justifyContent: 'flex-start',
+		alignItems: 'center',
+		width: '100%',
+	},
+	mealHeader: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		width: '100%',
+	},
+	mealList: {
+		marginTop: 10,
+		gap: 10,
+		width: '100%',
+	},
+	noMealsText: {
+		fontStyle: 'italic',
+		color: '#777',
+	},
+	totalCaloriesContainer: {
+		marginTop: 10,
+		alignItems: 'flex-end',
+	},
+	totalCaloriesText: {
+		fontSize: 16,
+		fontWeight: 'bold',
+	},
+	mealCard: {
+		flexDirection: 'column',
+		justifyContent: 'flex-start',
+		alignItems: 'flex-start',
+		padding: 15,
+		backgroundColor: '#f9f9f9',
+		borderRadius: 8,
+		width: '100%',
+		shadowColor: '#000',
+		shadowOffset: { width: 0, height: 2 },
+		shadowOpacity: 0.1,
+		shadowRadius: 4,
+		elevation: 2,
+		gap: 10,
+	},
+	mealName: {
+		fontSize: 18,
+		fontWeight: 'bold',
+		marginBottom: 5,
+	},
+	mealHeaderText: {
+		flexDirection: 'column',
+	},
+	mealMainContent: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		width: '100%',
+	},
+	mealMainCard: {
+		width: '100%',
+		flexDirection: 'column',
+		gap: 5,
+	},
+	mealInfo: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		width: '40%',
+	},
+	mealCalories: {
+		fontSize: 16,
+		color: '#555',
+	},
+	macroNutrients: {
+		flexDirection: 'row',
+		justifyContent: 'flex-start',
+		gap: 15,
+		width: '100%',
+	},
+	overlay: {
+		flex: 1,
+		backgroundColor: 'rgba(0, 0, 0, 0.5)',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	modalContainer: {
+		flexDirection: 'column',
+		alignItems: 'center',
+		justifyContent: 'center',
+		width: '80%',
+		backgroundColor: 'white',
+		borderRadius: 10,
+		padding: 20,
+	},
+	input: {
+		borderWidth: 1,
+		borderColor: '#ccc',
+		borderRadius: 5,
+		padding: 10,
+		marginTop: 10,
+		marginBottom: 20,
+		width: '100%',
+	},
+	header: {
+		fontSize: 24,
+		fontWeight: 'bold',
+		marginBottom: 20,
+	},
+	buttonSection: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		width: '100%',
+		gap: 10,
+	},
+});
