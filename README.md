@@ -1,0 +1,3 @@
+React Native training project.
+Uses Expo
+Simple calorie tracker using user input only; 
