@@ -12,10 +12,10 @@ export const styles = StyleSheet.create({
 		flexDirection: 'column',
 		backgroundColor: colors.primary,
 		alignItems: 'center',
-		justifyContent: 'space-between',
+		justifyContent: 'flex-start',
 	},
 	infoSection: {
-		flex: 0.1,
+		minHeight: 100,
 		width: '80%',
 		backgroundColor: colors.secondary,
 		alignItems: 'center',
@@ -64,7 +64,8 @@ export const styles = StyleSheet.create({
 	},
 	mealsContainerEmpty: {
 		flex: 0,
-		maxHeight: 150,
+		minHeight: 120,
+		maxHeight: 180,
 	},
 	customButton: {
 		width: '100%',
@@ -89,7 +90,7 @@ export const styles = StyleSheet.create({
 	},
 	mealHeader: {
 		flexDirection: 'row',
-		justifyContent: 'space-between',
+		justifyContent: 'space-evenly',
 		alignItems: 'center',
 		width: '100%',
 	},

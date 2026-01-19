@@ -9,7 +9,9 @@ export const MealSection = ({ onAddMeal, onDelete, meals, totalCalories }) => {
 			<View style={styles.mealHeader}>
 				<View style={styles.mealHeaderText}>
 					<Text style={styles.sectionTitle}>Meals </Text>
-					<Text>Total Calories: {totalCalories} kcal</Text>
+					{totalCalories > 0 && (
+						<Text>Total Calories: {totalCalories} kcal</Text>
+					)}
 				</View>
 				<TouchableOpacity hitSlop={20} onPress={onAddMeal}>
 					<Plus size={24} color="#d1c7c7" />

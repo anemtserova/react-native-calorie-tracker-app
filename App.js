@@ -6,6 +6,7 @@ import { AddMeal } from './Components/AddMeal/AddMeal';
 import { styles } from './styles';
 import { Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { MacronutrientGraphs } from './Components/Macronutrients/MacronutrientGraphs';
 
 export default function App() {
 	const [showAddMeal, setShowAddMeal] = useState(false);
@@ -16,13 +17,27 @@ export default function App() {
 	};
 
 	const handleAddMeal = (meal) => {
-		// Handle adding the meal here
 		setMeals((prevMeals) => [...prevMeals, meal]);
 		setShowAddMeal(false);
 	};
 
 	const totalCalories = useMemo(() => {
 		return meals.reduce((total, meal) => total + meal.calories, 0);
+	}, [meals]);
+
+	const totalProteins = useMemo(() => {
+		return meals.reduce(
+			(total, meal) => total + meal.macroNutrients.protein,
+			0,
+		);
+	}, [meals]);
+
+	const totalCarbs = useMemo(() => {
+		return meals.reduce((total, meal) => total + meal.macroNutrients.carbs, 0);
+	}, [meals]);
+
+	const totalFats = useMemo(() => {
+		return meals.reduce((total, meal) => total + meal.macroNutrients.fats, 0);
 	}, [meals]);
 
 	const handleDeleteMeal = (mealId) => {
@@ -40,7 +55,11 @@ export default function App() {
 					</View>
 
 					<View style={styles.infoSection}>
-						<Text style={styles.sectionTitle}>Calorie Overview</Text>
+						<MacronutrientGraphs
+							proteins={totalProteins}
+							carbs={totalCarbs}
+							fats={totalFats}
+						/>
 					</View>
 					{/*List of meals*/}
 					<ScrollView
@@ -62,15 +81,15 @@ export default function App() {
 						onAdd={handleAddMeal}
 					/>
 					{/*App Bar*/}
-					<View style={styles.appBar}>
-						<View style={styles.appBarIconSection}>
-							<TouchableOpacity hitSlop={20}>
-								<Home size={24} color="#d1c7c7" />
-							</TouchableOpacity>
-							<TouchableOpacity hitSlop={20} onPress={addMealHandler}>
-								<Plus size={24} color="#d1c7c7" />
-							</TouchableOpacity>
-						</View>
+				</View>
+				<View style={styles.appBar}>
+					<View style={styles.appBarIconSection}>
+						<TouchableOpacity hitSlop={20}>
+							<Home size={24} color="#d1c7c7" />
+						</TouchableOpacity>
+						<TouchableOpacity hitSlop={20} onPress={addMealHandler}>
+							<Plus size={24} color="#d1c7c7" />
+						</TouchableOpacity>
 					</View>
 				</View>
 			</SafeAreaView>
